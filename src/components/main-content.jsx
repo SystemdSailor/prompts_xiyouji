@@ -226,20 +226,18 @@ export function MainContent({ selectedChapter }) {
   // 处理输入框内容变化，更新输入值
   const handleInputChange = (key, value) => {
     setInputValues((prev) => ({ ...prev, [key]: value }))  // 更新指定 key 的输入值
+    calculateScore(key, value);
   }
 
   // 计算输入内容和原有内容的差异分数
-  const calculateScore = (inputValues) => {
-    let key = Object.keys(inputValues)[0];
-    let valueIn = inputValues[key];
+  const calculateScore = (key, value) => {
+    let valueIn = value;// inputValues[key]
     let valueOri = oriValues[key];
 
     worker.current.postMessage({
       valueIn: valueIn,
       valueOri:valueOri
     });
-    console.log("inputValues",inputValues);
-    // setScore(totalScore)
   }
 
   // 当选中的章节变化时，更新章节内容
@@ -247,12 +245,6 @@ export function MainContent({ selectedChapter }) {
     const { content } = chapterContent[selectedChapter] || chapterContent["第一回 灵根育孕源流出 心性修持大道生"]  // 获取选中章节的内容
     setProcessedContent(processSentences(content)) 
   }, [selectedChapter]) 
-
-  // Log inputValues whenever it changes
-  useEffect(() => {
-    console.log(inputValues);
-    calculateScore(inputValues)
-  }, [inputValues]);
 
   // 章节标题
   const { title } = chapterContent[selectedChapter] || chapterContent["第一回 灵根育孕源流出 心性修持大道生"]
