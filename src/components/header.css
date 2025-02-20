@@ -1,0 +1,52 @@
+/* 为 header 设置 Flexbox 布局 */
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 20px;             
+  background-color: #f8f8f8;      
+}
+
+
+.container {
+  flex: 1 0 auto; /* 使 container 占用剩余空间 */
+}
+
+
+.search-wrapper {
+  flex: 1 0 auto; /* 使 search-wrapper 的大小根据内容自动调整 */
+}
+
+
+.nav1 {
+  flex: 1 0 auto; 
+}
+
+.nav {
+  flex: 1 0 auto; /* 使导航栏的大小根据内容自动调整 */
+  display: flex; /* 确保使用了Flexbox布局 */
+  justify-content: flex-end; /* 让子元素在容器内靠右对齐 */
+}
+
+/* 可选：如果你希望增加一些间距或其他样式调整 */
+.nav a, .nav .ant-btn {
+  margin-left: 10px; /* 给每个链接或按钮添加左边距，以增加空间 */
+}
+
+
+/* 可选：添加一些间距和响应式样式 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* 在小屏幕上将 header 切换为竖直排列 */
+    align-items: flex-start;
+  }
+  .container {
+    order: 1; /* 可以调整顺序 */
+  }
+  .search-wrapper {
+    order: 2;
+  }
+  .nav {
+    order: 3;
+  }
+}

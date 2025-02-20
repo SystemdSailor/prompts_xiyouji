@@ -1,0 +1,35 @@
+
+.full-page {
+  background-color: white;
+  min-height: 100vh;
+  width: 100%; /* 让宽度占据父容器的全部宽度 */
+  padding: 0; /* 确保没有额外的内边距 */
+  margin: 0; /* 确保没有额外的外边距 */
+  box-sizing: border-box; /* 确保内边距和边框包含在元素的宽度和高度内 */
+}
+
+.container {
+  max-width: 100%; 
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* 
+
+.title {
+  font-size: 1.5rem; 
+  font-weight: 500; 
+  text-align: center;
+  margin-bottom: 2rem; 
+}
+
+.content {
+  color: #e11d48;
+  margin-bottom: 1.5rem; 
+}
+
+.score {
+  text-align: center;
+  margin-top: 1rem;
+} */
+
+

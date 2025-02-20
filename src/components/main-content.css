@@ -1,0 +1,47 @@
+/* 设置整个容器的基本样式 */
+.concent_container {
+    max-width: 100%; /* 根据需要调整最大宽度 */
+    padding: 20px;
+    background-color: #fff; /* 背景颜色 */
+  }
+  
+/* 设置标题容器的样式 */
+.title_container {
+    display: flex;
+    justify-content: space-between; /* 在两端对齐子元素 */
+    align-items: center; /* 垂直居中对齐 */
+    margin-bottom: 20px; /* 给下方留出空间 */
+}
+  
+/* 设置标题样式 */
+.title {
+    flex: 90%;
+    font-size: 2em; /* 字体大小 */
+    color: #333; /* 标题颜色 */
+    margin: 0; /* 移除默认的margin */
+    display: flex; 
+    justify-content: center; /* 让子元素在容器内靠右对齐 */
+}
+  
+/* 设置得分显示区域的样式 */
+.score {
+font-size: 1.2em;
+color: #5f2525; /* 得分颜色 */
+}
+  
+/* 设置内容区域的样式 */
+.content {
+    font-size: 1em;
+    line-height: 1.6; /* 行高设置，提高可读性 */
+    color: #0a0a0a; /* 内容文字颜色 */
+}
+
+
+
+
+
+
+.sentence {
+    padding-left: 2rem; /* pl-8 */
+    line-height: 2; /* leading-loose */
+}
