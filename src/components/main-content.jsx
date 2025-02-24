@@ -196,8 +196,9 @@ export function MainContent({ selectedChapter }) {
                 type="text"
                 value={inputValues[Number.parseInt(key)]}  // 显示用户输入的内容
                 onChange={(e) => handleInputChange(Number.parseInt(key), e.target.value)}  // 更新输入框内容
-                className="border border-gray-300 rounded px-2 py-1 my-1 w-full"
-                placeholder="请输入文字"
+                className="sentence_input"
+                placeholder={`请输入文字，当前长度: ${sentence.length}`}  // 显示字符数
+                style={{ width: `${Math.min(sentence.length * 10, 500)}px` }}  // 根据字数动态设置宽度，最多500px
               />
             )
           }
